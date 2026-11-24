@@ -1,0 +1,33 @@
+﻿ATUALIZAR A LEGENDA — EUPHORIA PT-BR
+
+OPÇÃO 1 — ARQUIVO LOCAL (sem recompilar)
+Abra o app uma vez para criar a pasta de saves. Copie o novo traducao.json
+para a pasta de saves do app, com esse nome exato. O runtime usa config.savedir.
+Em uma instalação nova Android, normalmente é:
+  /sdcard/Android/data/org.euphoriaptbr.jogo/files/saves/traducao.json
+O Ren'Py pode preferir uma pasta anterior ou privada já existente; o caminho
+real depende do aparelho. Android recente pode bloquear acesso pelo gerenciador.
+
+Exemplo USB/ADB, quando essa for a pasta usada pelo app:
+  adb shell am force-stop org.euphoriaptbr.jogo
+  adb push traducao.json /sdcard/Android/data/org.euphoriaptbr.jogo/files/saves/traducao.json
+
+Reabra o app ou use Preferências > Recarregar tradução.
+A fala que já estava visível pode manter o texto anterior; avance para conferir.
+O JSON local válido tem prioridade sobre o embutido. Se inválido, usa o embutido.
+Não substitua arquivos de save nem desinstale o app para atualizar textos.
+
+OPÇÃO 2 — URL CONFIGURADA NO PROJETO
+Antes de gerar o APK, edite renpy/euphoria/game/config_traducao.json:
+  {"url":"https://seu-servidor/traducao.json"}
+Execute tools\build_apk.bat e instale o APK com a mesma chave.
+O download ocorre em segundo plano ao abrir o app e aceita apenas uma versao
+maior que a atual. URL vazia desativa a atualização pela rede (padrão deste APK).
+Falhas de rede/JSON preservam o catálogo anterior. Recarregar tradução relê
+apenas o disco; reabrir o app inicia a consulta à URL configurada.
+
+FORMATO UTF-8
+  {"versao":2,"falas":{"id":"Texto"},"nomes":{},"escolhas":{}}
+versao: inteiro não negativo. Os três mapas são obrigatórios, com chaves e
+valores de texto. Preserve os IDs do catálogo; limite de leitura: 32 MiB.
+Use o catálogo completo novo. Nenhum texto de cena precisa ser recompilado.
