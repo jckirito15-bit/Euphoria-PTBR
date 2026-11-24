@@ -15,6 +15,7 @@ Tradução completa para o português do Brasil de *Euphoria* (Clockup / MangaGa
 |---|---|
 | `traducao/traducao.json` | A tradução. Formato: `{"versao": 2, "falas": {"ystNNNNN_n": "texto"}, "escolhas": {...}, "nomes": {...}}`. A chave de cada fala é o número do script do jogo (`yst`) e o número da fala nele. |
 | `porte/legenda.rpy` e `porte/legenda_core.py` | O código Ren'Py que carrega o `traducao.json` e mostra cada fala (também troca caracteres sem glifo e deixa palavras gigantes quebrarem). |
+| `porte/screens.rpy`, `porte/options.rpy`, `porte/ys_runtime.rpy`, `porte/ys_labels.json` | **Menus e interface em português** (Iniciar, Salvar, Carregar, Histórico, Preferências, botões da caixa de texto), o runtime do porte e a tabela de cenas. |
 | `porte/COMO_ATUALIZAR_LEGENDA.txt` | Como trocar a tradução num app já instalado, sem recompilar. |
 | `assets/logo-professor-dazai.png` | A logo da abertura (sem a faixa de "apoie"). |
 
@@ -23,7 +24,7 @@ Tradução completa para o português do Brasil de *Euphoria* (Clockup / MangaGa
 A tradução é lida por um porte do jogo para **Ren'Py** (o mesmo usado no app Android). Se você já tem o porte:
 
 1. Copie `traducao/traducao.json` para dentro da pasta `game/` do projeto Ren'Py (substitui o antigo).
-2. Copie `porte/legenda.rpy` para `game/` e `porte/legenda_core.py` para `game/python-packages/`.
+2. Copie `porte/legenda.rpy`, `porte/screens.rpy`, `porte/options.rpy`, `porte/ys_runtime.rpy` e `porte/ys_labels.json` para `game/`, e `porte/legenda_core.py` para `game/python-packages/`.
 3. Coloque `assets/logo-professor-dazai.png` em `game/cgsys/` com o nome `dazai1.png` (é a tela de abertura).
 4. Gere o jogo de novo (PC ou APK) com o Ren'Py.
 
