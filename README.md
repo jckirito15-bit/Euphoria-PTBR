@@ -17,6 +17,7 @@ Tradução completa para o português do Brasil de *Euphoria* (Clockup / MangaGa
 | `porte/legenda.rpy` e `porte/legenda_core.py` | O código Ren'Py que carrega o `traducao.json` e mostra cada fala (também troca caracteres sem glifo e deixa palavras gigantes quebrarem). |
 | `porte/screens.rpy`, `porte/options.rpy`, `porte/ys_runtime.rpy`, `porte/ys_labels.json` | **Menus e interface em português** (Iniciar, Salvar, Carregar, Histórico, Preferências, botões da caixa de texto), o runtime do porte e a tabela de cenas. |
 | `porte/COMO_ATUALIZAR_LEGENDA.txt` | Como trocar a tradução num app já instalado, sem recompilar. |
+| `conversor/` | **O conversor do jogo original (YU-RIS) para Ren'Py**, com o passo a passo em `conversor/LEIAME.md`. |
 | `assets/logo-professor-dazai.png` | A logo da abertura (sem a faixa de "apoie"). |
 
 ## Como colocar a tradução (passo a passo)
@@ -34,8 +35,10 @@ mais novo (veja `porte/COMO_ATUALIZAR_LEGENDA.txt`).
 
 ### Importante / Limitações da 1.0
 
-- O **conversor do jogo original (YU-RIS) para Ren'Py não está incluído** nesta versão: o que se publica aqui é a
-  tradução e o código de legenda. Sem o porte, o `traducao.json` sozinho não roda o jogo.
+- Para montar o porte do zero, com os seus próprios arquivos do jogo, siga **`conversor/LEIAME.md`**: o conversor do
+  jogo original (YU-RIS) para Ren'Py está incluído em `conversor/`. A conversão das cenas foi conferida (sai idêntica
+  ao porte que gerou o APK); a extração de assets e o build do APK foram feitos antes com as mesmas ferramentas, mas
+  não foram repetidos do zero nesta publicação.
 - O APK pronto não é distribuído porque contém os arquivos do jogo.
 
 ---
@@ -46,7 +49,7 @@ Full Brazilian Portuguese translation of *Euphoria* by **Professor Dazai**: 34,1
 No game files are included. `traducao/traducao.json` is read by a Ren'Py port (`porte/legenda.rpy`,
 `porte/legenda_core.py`). Put the JSON in the project's `game/` folder, the two code files as described above, the logo
 as `game/cgsys/dazai1.png`, and rebuild. To update an installed app without rebuilding, drop the new JSON in the app's
-saves folder. The YU-RIS→Ren'Py converter is not part of 1.0.
+saves folder. The YU-RIS→Ren'Py converter is included in `conversor/` (see `conversor/LEIAME.md`): you build the port from your own game files.
 
 ## Créditos / Credits
 

@@ -33,7 +33,7 @@ gerado na sua máquina.
    - `porte/legenda.rpy`, `porte/screens.rpy`, `porte/options.rpy`, `porte/ys_runtime.rpy` → `renpy\euphoria\game\`
    - `porte/legenda_core.py` → `renpy\euphoria\game\python-packages\`
    - `assets/logo-professor-dazai.png` → `renpy\euphoria\game\cgsys\dazai1.png` (abertura)
-   - uma fonte `fonts\NotoSans-Regular.ttf` (vem com o Ren'Py SDK) em `renpy\euphoria\game\fonts\`
+   - `porte/fonts/NotoSans-Regular.ttf` (licença OFL incluída) → `renpy\euphoria\game\fonts\`
 6. Abra a pasta `renpy\euphoria` no Ren'Py (ou rode `build_apk.bat` para gerar o APK Android).
 
 ## O que foi conferido e o que não
